@@ -1,0 +1,30 @@
+#include <iostream>
+#include <string>
+
+using namespace std;
+
+string word, text;
+
+string is_palindrome(string word){
+  string backwards;
+  cout << "Tell me a word please: ";
+  cin >> word;
+  cout << endl;
+
+  int large = word.length();
+  for (int x = large - 1; x >= 0; x--){
+  backwards += word[x];
+  }
+
+  if (backwards == word){
+  text= "I'm glad to say it is... A PALINDROME! ";
+  }
+
+  else
+  text = "I'm glad to say it is...NOT a palindrome#SorryNotSorry";
+  return text;
+}
+int main(){
+  cout << is_palindrome(text);
+  return 0;
+}
